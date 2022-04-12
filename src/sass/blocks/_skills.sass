@@ -1,0 +1,66 @@
+.skills
+    padding-top: 126px
+    position: relative
+    text-align: center
+    // @include before_circle
+    // &::before
+    //     left: 50%
+    //     transform: translateX(-50%)
+    //     top: 54%
+    .divider
+        margin: 0 auto
+    &__wrapper
+        display: grid
+        grid-template-columns: repeat(4, 270px)
+        grid-template-rows: repeat(2, minmax(270px, auto))
+        gap: 13px
+        margin-top: 60px
+    &__item
+        display: grid
+        padding: 30px
+        grid-template-columns: 198px
+        grid-template-rows: minmax(85px,auto) minmax(40px, auto) minmax(94px, auto)
+        justify-items: start
+        border: 1px solid #000
+    &__text
+        font-weight: 500
+        font-size: 12px
+        line-height: 18px
+        text-align: left
+    &__jquery
+        align-self: center
+    &__creating 
+        margin-top: 120px   
+        display: grid
+        grid-template-columns: repeat(3, 350px)
+        grid-template-rows: repeat(2, 70px)
+        column-gap: 45px
+        row-gap: 30px
+    &__creating-item
+        display: grid
+        grid-template-columns: repeat(2,175px)
+        grid-template-rows: repeat(2,1fr)
+    &__title-circle
+        justify-self: start
+        position: relative
+        @include before_circle
+        &::before
+            left: -13px
+    &__percent
+        justify-self: end
+    &__bar
+        // grid-column-start: 1
+        // grid-row-start: 2
+        // grid-row-end: 3
+        width: 350px
+        height: 14px
+        border-radius: 4px
+        background-color: #E8E4DE
+        position: relative
+    &__progressbar
+        position: absolute
+        border-radius: 4px
+        background-color: $orange
+        width: 150px
+        height: 14px
+    
