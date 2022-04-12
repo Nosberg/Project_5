@@ -1,0 +1,63 @@
+.review
+    padding: 120px 0
+    &__wrapper
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr
+    &__descr
+        width: 570px
+    &__subtitle
+        position: relative
+        font-weight: 700
+        font-size: 16px
+        line-height: 24px
+        color: #000000
+        padding-left: 12px
+        padding-top: 1px
+        @include before_circle
+    &__text
+        font-weight: 500
+        font-size: 14px
+        line-height: 21px
+        color: #000000
+        margin-top: 20px
+    &__services
+        display: grid
+        grid-template-columns: 260px 260px
+        grid-template-rows: repeat(2, minmax(116px, auto))
+        grid-auto-rows: 116px
+        grid-auto-columns: 260px
+        margin-top: 40px
+        row-gap: 20px
+        column-gap: 50px
+    &__subtext
+        position: relative
+        width: 200px
+        font-weight: 500
+        font-size: 12px
+        line-height: 18px
+        color: #000000
+        &_slashscreen
+            @include svg_in_circle
+        &_phone
+            @include svg_in_circle
+            &::before
+                content: url(../icons/phone.svg)
+                left: -20%
+        &_designerscreen
+            @include svg_in_circle
+            &::before
+                content: url(../icons/screen.svg)
+    &__item
+        justify-self: flex-end
+        position: relative
+        @include before_circle
+        &::before
+            top: 0
+            left: -30%
+
+@media screen and ( max-width: 1139px )
+    .review__wrapper
+        grid-template-columns: 1fr
+        grid-template-rows: 1fr 1fr
+        justify-items: center

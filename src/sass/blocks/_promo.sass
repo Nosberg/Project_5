@@ -21,6 +21,24 @@
             color: #000
     &__subtitle
         position: relative
-        z-index: 1
+        z-index: 2
         padding-left: 10px
         @include before_circle
+.hamburger
+    position: absolute
+    top: 20px
+    right: 30px
+    height: 21px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    cursor: pointer
+    align-items: flex-end
+    span
+        display: block
+        width: 30px
+        height: 3px
+        background-color: #151812
+        border: 1px solid #fff
+    span.long
+        width: 36px
