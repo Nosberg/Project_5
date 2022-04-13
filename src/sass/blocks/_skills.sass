@@ -40,18 +40,17 @@
         display: grid
         grid-template-columns: repeat(2,175px)
         grid-template-rows: repeat(2,1fr)
+        row-gap: 25px
     &__title-circle
         justify-self: start
         position: relative
+        padding-left: 13px
         @include before_circle
         &::before
-            left: -13px
+            top: -8px
     &__percent
         justify-self: end
     &__bar
-        // grid-column-start: 1
-        // grid-row-start: 2
-        // grid-row-end: 3
         width: 350px
         height: 14px
         border-radius: 4px

@@ -3,9 +3,9 @@
 # dependencies
 /node_modules
 /dist
+/src/Pulse
 # testing
 /coverage
-
 # production
 /build
 

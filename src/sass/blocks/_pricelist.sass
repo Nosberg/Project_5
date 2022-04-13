@@ -1,0 +1,41 @@
+.pricelist
+    padding-top: 66px
+    &__title
+        text-align: center
+        position: relative
+        @include before_circle
+        &::before
+            left: 50%
+            transform: translateX(-50%)
+    .divider
+        margin: 0 auto
+        margin-top: 31px
+    &__wrapper
+        margin-top: 60px
+        display: grid
+        grid-template: 1fr / 1fr 1fr
+        justify-content: space-between
+    &__price
+        font-weight: 700
+        font-size: 14px
+        line-height: 21px
+    &__descr
+        font-weight: 500
+        font-size: 12px
+        line-height: 18px
+    &__item
+        margin-bottom: 0
+        padding-left: 75px
+        li
+            position: relative
+            list-style-type: none
+            display: grid
+            grid-template: repeat(2, 1fr) / repeat(2, 1fr)
+            @include before_circle
+            &::before
+                width: 15px
+                height: 15px
+                top: 3px
+                left: -30px
+    &__descr
+        grid-column: 1/3
