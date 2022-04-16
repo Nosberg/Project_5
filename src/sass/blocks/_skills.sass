@@ -41,6 +41,12 @@
         grid-template-columns: repeat(2,175px)
         grid-template-rows: repeat(2,1fr)
         row-gap: 25px
+    &__title
+        position: relative
+        @include before_circle
+        &::before
+            left: 50%
+            transform: translateX(-50%)
     &__title-circle
         justify-self: start
         position: relative
