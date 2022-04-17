@@ -26,7 +26,22 @@
         &__creating
             grid-template-columns: repeat(2, 350px)
             justify-content: center
-
+    .portfolio
+        &__wrapper
+            grid-template-columns: repeat(auto-fit, 280px)
+            grid-auto-rows: 280px
+            justify-content: center
+            gap: 20px
+            .horizontal, .vertical
+                grid-row: unset
+                grid-column: unset
+            
+    .contacts
+        &__wrapper
+            grid-template-columns: 400px
+            grid-template-rows: 400px 600px
+            justify-content: center
+            padding: 0
 @media ( max-width: 992px )
     .container
         max-width: 720px
@@ -47,6 +62,10 @@
         &__wrapper
             grid-template-columns: repeat(3, 240px)
             grid-template-rows: repeat(3, minmax(240px, auto))
+    .pricelist
+        &__wrapper
+            grid-template: minmax(42px,auto)/repeat(auto-fit,450px)
+            justify-content: center
 @media ( max-width: 768px )
     .container
         max-width: 540px
@@ -78,8 +97,7 @@
                 left: -42%
     .skills
         &__wrapper
-            grid-template-columns: repeat(2, 240px)
-            grid-template-rows: repeat(2, minmax(240px, auto))
+            grid-template-columns: repeat(auto-fit, 270px)
         &__creating
             grid-template-columns: repeat(2, 300px)
         &__creating-item
@@ -88,6 +106,20 @@
                 font-size: 12px
         &__bar
             width: 300px
+    .portfolio
+        padding-top: 40px
+    .contacts
+        &__form
+            display: grid
+            grid-template: 45px 45px 190px 45px/300px
+            justify-content: space-between
+        &__textarea
+            grid-column: unset
+        &__triggers
+            grid-column: unset
+            row-gap: 30px
+            grid-template-columns: auto
+            column-gap: 0
 @media screen and ( max-width: 675px )
     .skills__creating
         grid-template-columns: repeat(1, 300px)
@@ -128,7 +160,31 @@
                 top: -16px
         &__item-location-university
             &::before
-                top: -16px    
-    .skills
+                top: -16px   
+        
+    .pricelist
         &__wrapper
-            grid-template-columns: repeat(1, 240px)
+            grid-template: minmax(42px,auto)/repeat(auto-fit,280px)
+            justify-content: center
+        &__item
+            padding-left: 0
+            li
+                grid-template: repeat(2,40px ) / repeat(2, 150px)
+                margin-top: 10px
+    .contacts
+        &__wrapper
+            grid-template-columns: 300px
+            grid-template-rows: 300px 800px
+            justify-items: center
+            row-gap: 30px
+@media screen and ( max-width: 360px )
+    .pricelist
+        &__wrapper
+            grid-template: minmax(42px,auto)/repeat(auto-fit,250px)
+        &__item
+            li
+                grid-template: repeat(2,40px ) / repeat(2, 134px)
+    
+    // .skills
+    //     &__wrapper
+    //         grid-template-columns: repeat(1, 240px)
